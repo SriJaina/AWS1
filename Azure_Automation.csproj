@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BC73424-C913-4D82-AF0E-0D0A303B1C2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Azure_Automation</RootNamespace>
+    <AssemblyName>Azure_Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Excel, Version=2.1.2.3, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Bson.2.4.0\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Driver.2.4.0\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Driver.Core.2.4.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.9.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>packages\RazorEngine.3.9.0\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.3.4.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.3.4.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Data\DataInput.cs" />
+    <Compile Include="Data\Data_createGSR.cs" />
+    <Compile Include="Data\Data_createSQLPaaS.cs" />
+    <Compile Include="Data\Exceldatareader.cs" />
+    <Compile Include="Input\AppServiceDetails.cs" />
+    <Compile Include="Object repository\Generalservicerequest.cs" />
+    <Compile Include="Object repository\Homepage.cs" />
+    <Compile Include="Object repository\Passwordreset.cs" />
+    <Compile Include="Object repository\PortalAccessRequest.cs" />
+    <Compile Include="Object repository\SQLPaaS.cs" />
+    <Compile Include="Pages\CreateAppEnv_ApplicationEnvironmentDetailsPage.cs" />
+    <Compile Include="Pages\CreateAppEnv_BillingInformationPage.cs" />
+    <Compile Include="Pages\CreateAppEnv_ManagementRoles.cs" />
+    <Compile Include="Pages\CreateAppEnv_TechnicalInformationPage.cs" />
+    <Compile Include="Pages\CreateAppServicePage.cs" />
+    <Compile Include="Pages\CreateAvailabilitySet_DescYourRequestPage.cs" />
+    <Compile Include="Pages\CreateAWSEnv_ManagementRolesPage.cs" />
+    <Compile Include="Pages\CreateAWSEnv_RequestDetails.cs" />
+    <Compile Include="Pages\CreateAWSEnv_TechnicalDetailsPage.cs" />
+    <Compile Include="Pages\CreateAzureLoadBalancer_LoadBalancerDetailsPage.cs" />
+    <Compile Include="Pages\CreateAzureLoadBalancer_RequestDetaislPage.cs" />
+    <Compile Include="Pages\CreateDataDisk_DataDiskDetailsPage.cs" />
+    <Compile Include="Pages\CreateDataDisk_RequestDetailsPage.cs" />
+    <Compile Include="Pages\CreateServiceAccount_EnvDetailsPage.cs" />
+    <Compile Include="Pages\CreateServiceAccount_ServiceAccountDetails.cs" />
+    <Compile Include="Pages\CreateStopStart_FrequencyandRecurrenceDetailsPage.cs" />
+    <Compile Include="Pages\CreateStopStart_ScheduleDetails.cs" />
+    <Compile Include="Pages\CreateStopStart_StatusandValidationPage.cs" />
+    <Compile Include="Pages\DashboardPage.cs" />
+    <Compile Include="Pages\DecomAppEnv_AppEnvDetailsPage.cs" />
+    <Compile Include="Pages\DecomAppEnv_ConfirmationPage.cs" />
+    <Compile Include="Pages\DecomAzureVM_EnvDetailsPage.cs" />
+    <Compile Include="Pages\DecomAzureVM_VMDetailsPage.cs" />
+    <Compile Include="Pages\DecommissionAvailabilitySetPage.cs" />
+    <Compile Include="Pages\DeleteDataDisk_RequestDetailsPage.cs" />
+    <Compile Include="Pages\DeleteStopStart_ScheduleDetails.cs" />
+    <Compile Include="Pages\ManageAppEnv_AppEnvDetailsPage.cs" />
+    <Compile Include="Pages\ManageAppEnv_BillingInfoPage.cs" />
+    <Compile Include="Pages\ManageAppEnv_ManagementRolesPage.cs" />
+    <Compile Include="Pages\ManageAppEnv_TechnicalInfoPage.cs" />
+    <Compile Include="Pages\ManageAWSEnv_BillingInformationPage.cs" />
+    <Compile Include="Pages\ManageAWSEnv_ManagementRolesPage.cs" />
+    <Compile Include="Pages\ManageAWSEnv_RequestDetails.cs" />
+    <Compile Include="Pages\ManageDataDisk_DataDiskDetailsPage.cs" />
+    <Compile Include="Pages\ManageDataDisk_RequestDetailsPage.cs" />
+    <Compile Include="Pages\ManageServiceAccount_EnvDetailsPage.cs" />
+    <Compile Include="Pages\ManageServiceAccount_OperationPage.cs" />
+    <Compile Include="Pages\ManageStopStart_ManageSchDetailsPage.cs" />
+    <Compile Include="Pages\ManageStopStart_ModifyScheduleInformationPages.cs" />
+    <Compile Include="Pages\ManageUpdateWaves_ResourcesPage.cs" />
+    <Compile Include="Pages\ManageUpdateWaves_UpdateWavePage.cs" />
+    <Compile Include="Pages\OnboardAzureVMs_RequestDetailsPage.cs" />
+    <Compile Include="Pages\OnboardVirtualVMs_AppEnvironmentDetailsPage.cs" />
+    <Compile Include="Pages\PrivateCloudVM_AppTierDetailsPage.cs" />
+    <Compile Include="Pages\PrivateCloudVM_DataTierDetailsPage.cs" />
+    <Compile Include="Pages\PrivateCloudVM_EnvDetailsPage.cs" />
+    <Compile Include="Pages\PrivateCloudVM_ValidationPage.cs" />
+    <Compile Include="Pages\PrivateCloudVM_WebTierDetailsPage.cs" />
+    <Compile Include="Pages\PublicCloudVMInternal_AppTierDetailsPage.cs" />
+    <Compile Include="Pages\PublicCloudVMInternal_DataTierDetailsPage.cs" />
+    <Compile Include="Pages\PublicCloudVMInternal_EnvDetailsPage.cs" />
+    <Compile Include="Pages\PublicCloudVMInternal_WebTierDetailsPage.cs" />
+    <Compile Include="Pages\RemovePermissionPage.cs" />
+    <Compile Include="Pages\RequestIaas_AppEnvironmentDetailsPage.cs" />
+    <Compile Include="Pages\RequestIaas_ApplicationServiceDetailsPage.cs" />
+    <Compile Include="Pages\RequestIaas_SelSubscription.cs" />
+    <Compile Include="Pages\RequestIaas_VSTSDetailsPage.cs" />
+    <Compile Include="Pages\RequestPermissionPage.cs" />
+    <Compile Include="Pages\ResourcesPage.cs" />
+    <Compile Include="Pages\SQLPaaS_EnvironmentDetails.cs" />
+    <Compile Include="Pages\SQLPaas_TechnicalDetails.cs" />
+    <Compile Include="Pages\StartAzureVMPage.cs" />
+    <Compile Include="Pages\StartVM_RequestDetailsPage.cs" />
+    <Compile Include="Pages\StopAzurePublicVMPage.cs" />
+    <Compile Include="Pages\StopVM_RequestDetailsPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test scripts\CreateGSR.cs" />
+    <Compile Include="Test scripts\CreatePortalAccessRequest.cs" />
+    <Compile Include="Test scripts\CreateSQLRequest.cs" />
+    <Compile Include="Test scripts\ManageApplicationService.cs" />
+    <Compile Include="Pages\ManageServiceAccount_OperationsPage.cs" />
+    <Compile Include="Test scripts\PasswordReset.cs" />
+    <Compile Include="Test scripts\AzureSQLPaaS.cs" />
+    <Compile Include="Test scripts\ServiceAccountsManagement.cs" />
+    <Compile Include="Test scripts\StopAzureVM.cs" />
+    <Compile Include="Test scripts\StartAzureVM.cs" />
+    <Compile Include="Test scripts\CreateAppEnvHigherSubnetSize.cs" />
+    <Compile Include="Test scripts\RequestPermission.cs" />
+    <Compile Include="Test scripts\RemovePermission.cs" />
+    <Compile Include="Test scripts\StopStartSchedule.cs" />
+    <Compile Include="Test scripts\AvailabilitySet.cs" />
+    <Compile Include="Test scripts\Request.NETIaaSPlatform.cs" />
+    <Compile Include="Test scripts\DataDisk.cs" />
+    <Compile Include="Test scripts\RequestPermissionAppEnvValidation.cs" />
+    <Compile Include="Test scripts\RemovePermissionAppEnvValidation.cs" />
+    <Compile Include="Test scripts\OnboardAzureVMs.cs" />
+    <Compile Include="Test scripts\DataDiskLinux.cs" />
+    <Compile Include="Test scripts\CreateAzureLoadBalancer.cs" />
+    <Compile Include="Test scripts\DecomLinuxVMActiveDataDisk.cs" />
+    <Compile Include="Test scripts\DecomLinuxVMNoActiveDataDisk.cs" />
+    <Compile Include="Test scripts\DecomWindowsVMNoActiveDataDisk.cs" />
+    <Compile Include="Test scripts\DecomWindowsVMActiveDataDisk.cs" />
+    <Compile Include="Test scripts\DecomAppEnv_ActiveLoadBalancer.cs" />
+    <Compile Include="Test scripts\ManageUpdateWaves.cs" />
+    <Compile Include="Test scripts\RequestPwCCloudAccount_GLBLShared.cs" />
+    <Compile Include="Test scripts\CreateAWSEnvironment.cs" />
+    <Compile Include="Test scripts\ManageAWSEnvironment.cs" />
+    <Compile Include="Utilities\CreateApplicationService.cs" />
+    <Compile Include="Test scripts\CreateApplicationServiceEnvironment.cs" />
+    <Compile Include="Utilities\BaseTest.cs" />
+    <Compile Include="Utilities\Commonfunctions.cs" />
+    <Compile Include="Utilities\ExcelMethods.cs" />
+    <Compile Include="Utilities\Properties.cs" />
+    <Compile Include="Utilities\Reusablefunctions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Data\Datasetup.xlsx" />
+    <None Include="Input\TestData.xlsx" />
+    <None Include="Input\TestData1.xlsx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="packages\Selenium.WebDriver.ChromeDriver.2.30.0.1\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.30.0.1\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
